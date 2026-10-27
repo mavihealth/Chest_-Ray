@@ -63,26 +63,6 @@
 
 Итоговое резюме, анализ ошибок, ограничения и следующие шаги: **[conclusions.md](conclusions.md)**.
 
-## Как запустить
-
-```bash
-git clone <url-репозитория>
-cd xray-covid-classification
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-```
-
-1. Скачайте датасет по [ссылке](https://drive.google.com/file/d/1zJklkBZA1gFbb4KLZaHld_BLf6iFKzGy/view?usp=sharing) и распакуйте в корень проекта так, чтобы получилось:
-
-   ```
-   project_dataset/
-   ├── Normal/images/*.png
-   ├── COVID/images/*.png
-   └── Viral Pneumonia/images/*.png
-   ```
-2. Откройте `notebooks/xray_classification.ipynb` и выполните ячейки по порядку. Ноутбук рассчитан на запуск из папки `notebooks/`: он читает данные из `../project_dataset/` и сохраняет графики в `../figures/`.
-   Устройство выбирается автоматически (Apple MPS → CUDA → CPU). Лучшие веса сохраняются в `best_model.pth` (в репозиторий не коммитятся).
-
 ## Структура репозитория
 
 ```
